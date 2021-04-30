@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   width: 100vw;
-  background-color: rgba(99, 105, 209, 0.5);
+  background-color: rgba(99, 105, 209, 0.25);
 `;
 
 export const Logo = styled.img`
