@@ -1,4 +1,4 @@
-import { Header } from "../src/containers/header";
+import { Header } from "containers";
 
 export default function Home({ children, ...props }) {
   return (

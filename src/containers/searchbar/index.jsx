@@ -2,12 +2,14 @@ import { SearchBar } from "components";
 
 export default function SearchBarContainer({ children, ...props }) {
   return (
-    <SearchBar.Container {...props}>
+    <SearchBar {...props}>
       <SearchBar.Wrapper {...props}>
-        <SearchBar.Input placeholder="Search here"></SearchBar.Input>
-        <SearcBar.Text>Click to Search:</SearcBar.Text>;
+        <SearchBar.Button
+          src="./icons/search-icon.svg"
+          alt="Search Button before search bar"
+        />
+        <SearchBar.Input />
       </SearchBar.Wrapper>
-      <SearchBar.Button src="/icons/search-icon.svg" alt="Search Button" />
-    </SearchBar.Container>
+    </SearchBar>
   );
 }
