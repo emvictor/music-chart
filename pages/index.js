@@ -1,45 +1,47 @@
-import { Header } from "containers";
-import { HomeContainer, MusicCard } from "components";
+import { Header, MusicList } from "containers";
+import { HomeContainer } from "components";
 import { getMusicsData } from "lib";
 import Link from "next/link";
+import MusicCard from "../src/components/music-card";
 
 export default function Home({ musicData }) {
-  function playAudio() {
-    var audio = document.getElementById("a1");
-    return audio.play;
-  }
-
   return (
     <HomeContainer>
       <Header />
-      <MusicCard key={musicData.id}>
-        {musicData.map((music) => (
-          <>
-            <MusicCard.Cover src={music.album.cover} />
-            <MusicCard.Wrapper>
-              <MusicCard.Title key={music.id}>
-                {music.title} - {music.position}
-              </MusicCard.Title>
-              <MusicCard.Artist>{music.artist.name}</MusicCard.Artist>
-              <MusicCard.Duration>{music.duration}</MusicCard.Duration>
-              <MusicCard.Album>{music.album.title}</MusicCard.Album>
-            </MusicCard.Wrapper>
-            <MusicCard.Wrapper>
-              <Link href={music.link}>
-                <MusicCard.Deezer>{music.link}</MusicCard.Deezer>
-              </Link>
-              <MusicCard.Preview
-                id="a1"
-                onClick={playAudio}
-                src={music.preview}
-              >
-                {music.preview}
-              </MusicCard.Preview>
-            </MusicCard.Wrapper>
-          </>
-        ))}
-      </MusicCard>
-      <p>oi</p>
+      <MusicList>
+        <MusicCard key={musicData.id}>
+          {musicData.map((music) => (
+            <>
+              <MusicCard.Separator>
+                <MusicCard.Wrapper>
+                  <MusicCard.Cover src={music.album.cover} />
+                  <MusicCard.Metadata>
+                    <MusicCard.Title key={music.id}>
+                      {music.title}
+                    </MusicCard.Title>
+                    <MusicCard.Artist>{music.artist.name} </MusicCard.Artist>
+                    <MusicCard.Album>
+                      {" "}
+                      {">"} {music.album.title}{" "}
+                    </MusicCard.Album>
+                    <MusicCard.Duration>
+                      {music.duration} seconds
+                    </MusicCard.Duration>
+                  </MusicCard.Metadata>
+                  <MusicCard.Buttons>
+                    <MusicCard.Deezer
+                      target="_blank"
+                      href={music.link}
+                      title="Listen on Deezer"
+                    ></MusicCard.Deezer>
+                    <MusicCard.Preview title="Preview song"></MusicCard.Preview>
+                  </MusicCard.Buttons>
+                </MusicCard.Wrapper>
+              </MusicCard.Separator>
+            </>
+          ))}
+        </MusicCard>
+      </MusicList>
     </HomeContainer>
   );
 }

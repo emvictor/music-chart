@@ -8,6 +8,9 @@ import {
   Duration,
   Preview,
   Deezer,
+  Separator,
+  Metadata,
+  Buttons,
 } from "./styles/music.styles";
 
 export default function MusicCard({ children, ...props }) {
@@ -44,4 +47,16 @@ MusicCard.Duration = function MusicCardDuration({ children, ...props }) {
 
 MusicCard.Deezer = function MusicCardDeezer({ children, ...props }) {
   return <Deezer {...props}>{children}</Deezer>;
+};
+
+MusicCard.Separator = function MusicCardSeparator({ children, ...props }) {
+  return <Separator {...props}>{children}</Separator>;
+};
+
+MusicCard.Metadata = function MusicCardMetadata({ children, ...props }) {
+  return <Metadata {...props}>{children}</Metadata>;
+};
+
+MusicCard.Buttons = function MusicCardButtons({ children, ...props }) {
+  return <Buttons {...props}>{children}</Buttons>;
 };

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiURL = "https://api.deezer.com/chart/0/tracks?limit=3";
+const apiURL = "https://api.deezer.com/chart/0/tracks?limit=100";
 
 export async function getMusicsData() {
   const Data = await axios.get(apiURL);
