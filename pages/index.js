@@ -1,6 +1,7 @@
 import { Header, MusicList } from "containers";
 import { HomeContainer } from "components";
 import { getMusicsData } from "lib";
+import Link from "next/link";
 import MusicCard from "../src/components/music-card";
 
 export default function Home({ musicData }) {
@@ -28,12 +29,12 @@ export default function Home({ musicData }) {
                     </MusicCard.Duration>
                   </MusicCard.Metadata>
                   <MusicCard.Buttons>
-                    <MusicCard.Deezer
-                      target="_blank"
-                      href={music.link}
-                      title="Listen on Deezer"
-                    ></MusicCard.Deezer>
-                    <MusicCard.Preview title="Preview song"></MusicCard.Preview>
+                    <Link href={music.link}>
+                      <MusicCard.Deezer title="Listen on Deezer"></MusicCard.Deezer>
+                    </Link>
+                    <Link href={music.preview}>
+                      <MusicCard.Preview title="Preview song"></MusicCard.Preview>
+                    </Link>
                   </MusicCard.Buttons>
                 </MusicCard.Wrapper>
               </MusicCard.Separator>
