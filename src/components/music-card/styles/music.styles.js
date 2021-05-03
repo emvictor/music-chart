@@ -55,7 +55,7 @@ export const Preview = styled.button`
   width: 30px;
   border: none;
   cursor: pointer;
-  margin &:hover {
+  &:hover {
     opacity: 1;
   }
 `;
