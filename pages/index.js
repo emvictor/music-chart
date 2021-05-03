@@ -1,7 +1,6 @@
 import { Header, MusicList } from "containers";
 import { HomeContainer } from "components";
 import { getMusicsData } from "lib";
-import Link from "next/link";
 import MusicCard from "../src/components/music-card";
 
 export default function Home({ musicData }) {
