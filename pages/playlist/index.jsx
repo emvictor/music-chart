@@ -1,19 +1,17 @@
-import { Header, MusicList } from "containers";
 import { HomeContainer, MusicCard } from "components";
-import { getMusicsData } from "lib";
+import { Header, MusicList } from "containers";
+import { removeMusic } from "../../src/lib/playlist/playlistSlice";
+import { useSelector } from "react-redux";
 import Link from "next/link";
-import { useDispatch } from "react-redux";
-import { addMusic } from "../src/lib/playlist/playlistSlice";
 
-export default function Home({ musicData }) {
-  const dispatch = useDispatch();
-
+export default function Playlist({}) {
+  const musics = useSelector((state) => state.playlist);
   return (
     <HomeContainer>
       <Header />
       <MusicList>
-        <MusicCard key={musicData.id}>
-          {musicData.map((music) => (
+        <MusicCard key={musics.id}>
+          {musics.map((music) => (
             <>
               <MusicCard.Separator>
                 <MusicCard.Wrapper>
@@ -32,11 +30,6 @@ export default function Home({ musicData }) {
                     </MusicCard.Duration>
                   </MusicCard.Metadata>
                   <MusicCard.Buttons>
-                    <MusicCard.AddButton
-                      onClick={() => dispatch(addMusic(music))}
-                    >
-                      {"<3"}
-                    </MusicCard.AddButton>
                     <Link href={music.link}>
                       <MusicCard.Deezer title="Listen on Deezer"></MusicCard.Deezer>
                     </Link>
@@ -52,11 +45,4 @@ export default function Home({ musicData }) {
       </MusicList>
     </HomeContainer>
   );
-}
-
-export async function getServerSideProps() {
-  const musicData = await getMusicsData();
-  return {
-    props: { musicData },
-  };
 }
