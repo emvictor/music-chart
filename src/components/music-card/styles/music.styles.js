@@ -97,3 +97,7 @@ export const Buttons = styled.div`
   align-items: center;
   padding-right: 15px;
 `;
+
+export const AddButton = styled.button``;
+
+export const RemoveButton = styled.button``;

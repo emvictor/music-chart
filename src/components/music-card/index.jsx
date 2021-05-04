@@ -11,6 +11,8 @@ import {
   Separator,
   Metadata,
   Buttons,
+  AddButton,
+  RemoveButton,
 } from "./styles/music.styles";
 
 export default function MusicCard({ children, ...props }) {
@@ -59,4 +61,15 @@ MusicCard.Metadata = function MusicCardMetadata({ children, ...props }) {
 
 MusicCard.Buttons = function MusicCardButtons({ children, ...props }) {
   return <Buttons {...props}>{children}</Buttons>;
+};
+
+MusicCard.AddButton = function MusicCardAddButton({ children, ...props }) {
+  return <AddButton {...props}>{children}</AddButton>;
+};
+
+MusicCard.RemoveButton = function MusicCardRemoveButton({
+  children,
+  ...props
+}) {
+  return <RemoveButton {...props}>{children}</RemoveButton>;
 };

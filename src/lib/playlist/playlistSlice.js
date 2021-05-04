@@ -1,16 +1,14 @@
-import { createSlice } from "redux-toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 export const playlistSlice = createSlice({
   name: "playlist",
-  initialState: {
-    value: [],
-  },
+  initialState: [{}],
   reducers: {
-    addMusic: (state) => {
-      state.value = value.push(music);
+    addMusic(state, action) {
+      state.push(action.payload);
     },
 
-    removeMusic: (state) => {
+    removeMusic(state) {
       const removeIndex = state.value
         .map(function (item) {
           return item.id;
@@ -22,5 +20,7 @@ export const playlistSlice = createSlice({
 });
 
 export const { addMusic, removeMusic } = playlistSlice.actions;
+
+export const selectPlaylist = (state) => state.playlist.value;
 
 export default playlistSlice.reducer;

@@ -3,8 +3,12 @@ import { HomeContainer } from "components";
 import { getMusicsData } from "lib";
 import Link from "next/link";
 import MusicCard from "../src/components/music-card";
+import { useDispatch } from "react-redux";
+import { addMusic } from "../src/lib/playlist/playlistSlice";
 
 export default function Home({ musicData }) {
+  const dispatch = useDispatch();
+
   return (
     <HomeContainer>
       <Header />
@@ -29,6 +33,11 @@ export default function Home({ musicData }) {
                     </MusicCard.Duration>
                   </MusicCard.Metadata>
                   <MusicCard.Buttons>
+                    <MusicCard.AddButton
+                      onClick={() => dispatch(addMusic(music))}
+                    >
+                      {"<3"}
+                    </MusicCard.AddButton>
                     <Link href={music.link}>
                       <MusicCard.Deezer title="Listen on Deezer"></MusicCard.Deezer>
                     </Link>
