@@ -6,6 +6,9 @@ export const Container = styled.div`
   margin-top: 100px;
   justify-content: center;
   flex-direction: row;
+  @media screen and (max-width: 1000px) {
+    margin-top: 25px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -18,7 +21,6 @@ export const Wrapper = styled.div`
 `;
 
 export const Button = styled.button`
-  width: 100px;
   align-self: flex-end;
   margin-bottom: 20px;
   background: none;
