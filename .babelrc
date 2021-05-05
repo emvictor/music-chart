@@ -8,7 +8,8 @@
         "alias": {
           "hooks": "./src/hooks",
           "components": "./src/components",
-          "containers": "./src/containers"
+          "containers": "./src/containers",
+          "lib": "./src/lib"
         }
       }
     ]

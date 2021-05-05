@@ -10,7 +10,7 @@ ${Reset}
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: black;
-    color: black;
+    color: white;
     font-size: 1rem;
     margin: 0;
  }
