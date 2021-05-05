@@ -1,34 +1,108 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div style="font-size:20px">
+  <h1>NextJS Music Chart</h1>
+</div>
 
-## Getting Started
+# About The Project
 
-First, run the development server:
+## Preview
 
-```bash
-npm run dev
-# or
-yarn dev
+The project can be previewed on https://music-chart.vercel.app/
+
+
+<br/>
+
+## Overview
+
+This music chart app is made with Next.js, Axios, Redux and styled-components.
+
+It fetches the top 100 musics on Deezer chart and allows you to add to a playlist, listen on Deezer and listen to a preview.
+
+<br/>
+
+## Features
+
+### Musics List
+
+The main view presents a music list with the musics from the forementioned API separately and fully clickable.
+
+### Add to Playlist
+
+The Add to Playlist button allows you to select the songs and add them to a playlist.
+
+### Deezer and Preview Buttons
+
+The Deezer Logo gets you to the song page, while the Play button takes you to a preview (playing preview audio in the same page is a work in progress).
+
+### Playlist Page
+
+The second view presents the playlist, with the musics selected by the user. The "Remove" button is a feature in development.
+
+### Searchbar
+
+The searchbar is currently under development.
+
+### Responsive Design
+
+The app is fully responsive, working in both desktop and mobile.
+
+<br/>
+
+## Screenshots
+
+<br/>
+
+<img src="https://i.imgur.com/RoGySiB.jpg" alt="Screenshot 1"
+width="640"
+height="341">
+
+<img src="https://i.imgur.com/8CAMSDw.jpg" alt="Screenshot 2"
+width="382"
+height="510">
+
+<img src="https://i.imgur.com/901Fw2n.jpg" alt="Screenshot 3"
+width="382"
+height="510">
+
+
+# Setting Up
+
+### Requirements
+
+- Node 14.4.x or up
+- Yarn (or npm)
+
+ <br/>
+
+### Installing the dependencies
+
+```
+$ yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br/>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Available Scripts
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+In the project directory, you can run:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+ <br/> 
+ 
+### `yarn dev`
 
-## Learn More
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-To learn more about Next.js, take a look at the following resources:
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ <br/>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### `yarn build`
 
-## Deploy on Vercel
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
