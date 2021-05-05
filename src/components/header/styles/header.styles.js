@@ -11,6 +11,7 @@ export const Logo = styled.img`
   height: 2.75rem;
   margin-left: 1rem;
   filter: invert(1);
+  cursor: pointer;
 `;
 
 export const Wrapper = styled.div`
@@ -27,6 +28,7 @@ export const Title = styled.h1`
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
+  cursor: pointer;
   @media screen and (max-width: 1010px) {
     font-size: 1.25rem;
   }

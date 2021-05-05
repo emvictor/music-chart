@@ -17,4 +17,23 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Button = styled.button``;
+export const Button = styled.button`
+  width: 100px;
+  align-self: flex-end;
+  margin-bottom: 20px;
+  background: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+    color: black;
+    background: white;
+    border: 1px solid black;
+  }
+`;

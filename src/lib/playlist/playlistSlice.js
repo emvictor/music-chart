@@ -8,13 +8,8 @@ export const playlistSlice = createSlice({
       state.push(action.payload);
     },
 
-    removeMusic(state) {
-      const removeIndex = state.value
-        .map(function (item) {
-          return item.id;
-        })
-        .indexOf(music.id);
-      state.value = value.splice(removeIndex, 1);
+    removeMusic(state, action) {
+      state.filter((musics) => musics !== action.payload);
     },
   },
 });

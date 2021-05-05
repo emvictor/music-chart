@@ -1,11 +1,12 @@
 import { HomeContainer, MusicCard } from "components";
 import { Header, MusicList } from "containers";
 import { removeMusic } from "../../src/lib/playlist/playlistSlice";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
 
 export default function Playlist({}) {
   const musics = useSelector((state) => state.playlist);
+  const dispatch = useDispatch();
   return (
     <HomeContainer>
       <Header />
@@ -30,6 +31,11 @@ export default function Playlist({}) {
                     </MusicCard.Duration>
                   </MusicCard.Metadata>
                   <MusicCard.Buttons>
+                    <MusicCard.RemoveButton
+                      onClick={() => dispatch(removeMusic(music))}
+                    >
+                      Remove
+                    </MusicCard.RemoveButton>
                     <Link href={music.link}>
                       <MusicCard.Deezer title="Listen on Deezer"></MusicCard.Deezer>
                     </Link>

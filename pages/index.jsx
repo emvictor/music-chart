@@ -35,7 +35,7 @@ export default function Home({ musicData }) {
                     <MusicCard.AddButton
                       onClick={() => dispatch(addMusic(music))}
                     >
-                      {"<3"}
+                      {"Add to Playlist <3"}
                     </MusicCard.AddButton>
                     <Link href={music.link}>
                       <MusicCard.Deezer title="Listen on Deezer"></MusicCard.Deezer>

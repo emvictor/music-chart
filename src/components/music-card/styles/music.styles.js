@@ -98,6 +98,32 @@ export const Buttons = styled.div`
   padding-right: 15px;
 `;
 
-export const AddButton = styled.button``;
+export const AddButton = styled.button`
+  background: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+`;
 
-export const RemoveButton = styled.button``;
+export const RemoveButton = styled.button`
+  background: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+`;
